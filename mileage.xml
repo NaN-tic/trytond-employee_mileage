@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- company.employee -->
+        <record model="ir.ui.view" id="company_list">
+			<field name="name">company_list</field>
+			<field name="model">company.employee</field>
+			<field name="inherit" ref="company.employee_view_tree"/>
+		</record>
+		<record model="ir.ui.view" id="company_form">
+			<field name="name">company_form</field>
+			<field name="model">company.employee</field>
+			<field name="inherit" ref="company.employee_view_form"/>
+		</record>
+
+        <!-- account.configuration -->
+        <record model="ir.ui.view" id="configuration_form">
+			<field name="name">config_form</field>
+			<field name="model">account.configuration</field>
+			<field name="inherit" ref="account.configuration_view_form"/>
+		</record>
+    
+        <!-- employee.mileage.period -->
+        <record model="ir.ui.view" id="period_form">
+            <field name="name">period_form</field>
+            <field name="model">employee.mileage.period</field>
+            <field name="type">form</field>
+        </record>
+        <record model="ir.ui.view" id="period_list">
+            <field name="name">period_list</field>
+            <field name="model">employee.mileage.period</field>
+            <field name="type">tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_period">
+            <field name="name">Period</field>
+            <field name="res_model">employee.mileage.period</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_period_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="period_form"/>
+            <field name="act_window" ref="act_period" />
+        </record>
+        <record model="ir.action.act_window.view" id="act_period_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="period_list"/>
+            <field name="act_window" ref="act_period" />
+        </record>
+
+        <record model="ir.model.button" id="button_draft">
+            <field name="name">draft</field>
+            <field name="string">Draft</field>
+            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+        </record>
+        <record model="ir.model.button" id="button_confirm">
+            <field name="name">confirm</field>
+            <field name="string">Confirm</field>
+            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+        </record>
+        <record model="ir.model.button" id="button_post">
+            <field name="name">post</field>
+            <field name="string">Post</field>
+            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+        </record>
+        <record model="ir.model.button" id="button_cancel">
+            <field name="name">cancel</field>
+            <field name="string">Cancel</field>
+            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+        </record>
+
+        <menuitem id="menu_period" parent="company.menu_company" sequence="1" icon="tryton-list" action="act_period" />
+
+        <!-- employee.mileage -->
+        <record model="ir.ui.view" id="mileage_form">
+            <field name="name">mileage_form</field>
+            <field name="model">employee.mileage</field>
+            <field name="type">form</field>
+        </record>
+        <record model="ir.ui.view" id="mileage_list">
+            <field name="name">mileage_list</field>
+            <field name="model">employee.mileage</field>
+            <field name="type">tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_mileage">
+            <field name="name">Mileage</field>
+            <field name="res_model">employee.mileage</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mileage_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="mileage_form"/>
+            <field name="act_window" ref="act_mileage" />
+        </record>
+        <record model="ir.action.act_window.view" id="act_mileage_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="mileage_list"/>
+            <field name="act_window" ref="act_mileage" />
+        </record>
+        <menuitem id="menu_mileage" parent="menu_period" sequence="1" icon="tryton-list" action="act_mileage" />
+    </data>
+</tryton>

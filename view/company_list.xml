@@ -1,0 +1,5 @@
+<data>  
+	<xpath expr="/tree/field[@name='supervisor']" position="after">
+
+    </xpath>
+</data>

@@ -1,0 +1,17 @@
+<form >
+    <label name="name"/>
+    <field name="name"/>
+    <label name="employee"/>
+    <field name="employee"/>
+    <field name="mileage" colspan="4" height="300"/>
+    <label name="state"/>
+    <field name="state"/>
+    <group id="buttons" colspan="2">
+        <button name="draft"/>
+        <button name="confirm"/>
+        <button name="post"/>
+        <button name="cancel"/>
+    </group>
+    <label name="move"/>
+    <field name="move" colspan="3"/>
+</form>

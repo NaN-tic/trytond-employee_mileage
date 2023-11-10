@@ -1,0 +1,10 @@
+<data>  
+	<xpath expr="/form" position="inside">
+
+        <separator id="newconfig" string="Employee Mileage" colspan="4"/>
+        <label name="employee_mileage_journal"/> 
+        <field name="employee_mileage_journal"/>
+        <newline/>
+        
+    </xpath>
+</data>
