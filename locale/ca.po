@@ -1,0 +1,161 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.configuration,employee_mileage_journal:"
+msgid "Default Account Journal Mileage"
+msgstr "Diari per defecte pel quilometratge"
+
+msgctxt "field:account.configuration.mileage,company:"
+msgid "Company"
+msgstr "Companyia"
+
+msgctxt "field:account.configuration.mileage,employee_mileage_journal:"
+msgid "Default Account Journal Mileage"
+msgstr "Diari per defecte pel quilometratge"
+
+msgctxt "field:company.employee,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:company.employee,debit_account:"
+msgid "Debit account"
+msgstr "Compte de dèbit"
+
+msgctxt "field:company.employee,price_per_km:"
+msgid "Price per KM"
+msgstr "Preu per KM"
+
+msgctxt "field:employee.mileage,address:"
+msgid "Address"
+msgstr "Adreça"
+
+msgctxt "field:employee.mileage,date:"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "field:employee.mileage,description:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "field:employee.mileage,distance:"
+msgid "Distance"
+msgstr "Distància"
+
+msgctxt "field:employee.mileage,period:"
+msgid "Period"
+msgstr "Període"
+
+msgctxt "field:employee.mileage,resource:"
+msgid "Resource"
+msgstr "Recurs"
+
+msgctxt "field:employee.mileage.period,employee:"
+msgid "Employee"
+msgstr "Empleat"
+
+msgctxt "field:employee.mileage.period,mileage:"
+msgid "Mileage"
+msgstr "Quilometratge"
+
+msgctxt "field:employee.mileage.period,move:"
+msgid "Account Move"
+msgstr "Assentament"
+
+msgctxt "field:employee.mileage.period,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:employee.mileage.period,state:"
+msgid "State"
+msgstr "Estat"
+
+msgctxt "model:account.configuration.mileage,name:"
+msgid "Account Configuration Mileage"
+msgstr "Compte del quilometratge"
+
+msgctxt "model:employee.mileage,name:"
+msgid "Employee Mileage"
+msgstr "Quilometratge dels empleats"
+
+msgctxt "model:employee.mileage.period,name:"
+msgid "Employee Mileage Period"
+msgstr "Període de quilometratge d'empleats"
+
+msgctxt "model:ir.action,name:act_mileage"
+msgid "Mileage"
+msgstr "Quilometratge"
+
+msgctxt "model:ir.action,name:act_period"
+msgid "Period"
+msgstr "Període"
+
+msgctxt "model:ir.message,text:msg_credit_none"
+msgid "Employee \"%(name)s\" don't have a credit account!"
+msgstr "L'empleat \"%(name)s\" no té un compte de crèdit."
+
+msgctxt "model:ir.message,text:msg_debit_none"
+msgid ""
+"Employee \"%(name)s\" don't have a debit account! \n"
+"                Error: Empty value. \n"
+"                Ref: 'Companies/Employees/%(name)s/Debit account'"
+msgstr ""
+"L'empleat \"%(name)s\" no té un compte de dèbit! Error: valor buit. Ref: "
+"\"Empreses/Empleats/%(nom)s/Compte de dèbit\""
+
+msgctxt "model:ir.message,text:msg_no_price_per_km"
+msgid "Employee \"%(name)s\" don't have price_per_km defined! Error: Empty value."
+msgstr "L'empleat \"%(name)s\" no té el preu_per_km definit! Error: valor buit."
+
+msgctxt "model:ir.model.button,string:button_cancel"
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+msgctxt "model:ir.model.button,string:button_confirm"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "model:ir.model.button,string:button_draft"
+msgid "Draft"
+msgstr "Esborrany"
+
+msgctxt "model:ir.model.button,string:button_post"
+msgid "Post"
+msgstr "Comptabilitzar"
+
+msgctxt "model:ir.ui.menu,name:menu_mileage"
+msgid "Mileage"
+msgstr "Quilometratge"
+
+msgctxt "model:ir.ui.menu,name:menu_period"
+msgid "Period"
+msgstr "Període"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Cancelled"
+msgstr "Cancel·lat"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Confirmed"
+msgstr "Confirmat"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Draft"
+msgstr "Esborrany"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Posted"
+msgstr "Comptabilitzat"
+
+msgctxt "view:account.configuration:"
+msgid "Employee Mileage"
+msgstr "Quilometratge d'empleats"
+
+msgctxt "view:company.employee:"
+msgid "Mileage"
+msgstr "Quilometratge"
+
+#, fuzzy
+msgctxt "view:employee.mileage:"
+msgid "1"
+msgstr "1"

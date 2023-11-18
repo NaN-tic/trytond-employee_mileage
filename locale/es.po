@@ -1,0 +1,158 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.configuration,employee_mileage_journal:"
+msgid "Default Account Journal Mileage"
+msgstr "Diario por defecto para kilometraje"
+
+msgctxt "field:account.configuration.mileage,company:"
+msgid "Company"
+msgstr "Compañía"
+
+msgctxt "field:account.configuration.mileage,employee_mileage_journal:"
+msgid "Default Account Journal Mileage"
+msgstr "Diario por defecto para kilometraje"
+
+msgctxt "field:company.employee,currency:"
+msgid "Currency"
+msgstr "Divisa"
+
+msgctxt "field:company.employee,debit_account:"
+msgid "Debit account"
+msgstr "Cuenta de débito"
+
+msgctxt "field:company.employee,price_per_km:"
+msgid "Price per KM"
+msgstr "Precio por KM"
+
+msgctxt "field:employee.mileage,address:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "field:employee.mileage,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:employee.mileage,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:employee.mileage,distance:"
+msgid "Distance"
+msgstr "Distancia"
+
+msgctxt "field:employee.mileage,period:"
+msgid "Period"
+msgstr "Período"
+
+msgctxt "field:employee.mileage,resource:"
+msgid "Resource"
+msgstr "Recurso"
+
+msgctxt "field:employee.mileage.period,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:employee.mileage.period,mileage:"
+msgid "Mileage"
+msgstr "Kilometraje"
+
+msgctxt "field:employee.mileage.period,move:"
+msgid "Account Move"
+msgstr "Asiento"
+
+msgctxt "field:employee.mileage.period,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.mileage.period,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "model:account.configuration.mileage,name:"
+msgid "Account Configuration Mileage"
+msgstr "Configuratión cuenta kilometraje"
+
+msgctxt "model:employee.mileage,name:"
+msgid "Employee Mileage"
+msgstr "Kilometraje de los empleados"
+
+msgctxt "model:employee.mileage.period,name:"
+msgid "Employee Mileage Period"
+msgstr "Período de kilometraje de empleado"
+
+msgctxt "model:ir.action,name:act_mileage"
+msgid "Mileage"
+msgstr "Kilometraje"
+
+msgctxt "model:ir.action,name:act_period"
+msgid "Period"
+msgstr "Período"
+
+msgctxt "model:ir.message,text:msg_credit_none"
+msgid "Employee \"%(name)s\" don't have a credit account!"
+msgstr "El empleado \"%(name)s\" no tiene una cuenta de crédito."
+
+msgctxt "model:ir.message,text:msg_debit_none"
+msgid ""
+"Employee \"%(name)s\" don't have a debit account! \n"
+"                Error: Empty value. \n"
+"                Ref: 'Companies/Employees/%(name)s/Debit account'"
+msgstr "El empleado \"%(name)s\" no tiene una cuenta de débito!"
+
+msgctxt "model:ir.message,text:msg_no_price_per_km"
+msgid "Employee \"%(name)s\" don't have price_per_km defined! Error: Empty value."
+msgstr "El emplado \"%(name)s\" no tiene \"Precio por km\" definido!"
+
+msgctxt "model:ir.model.button,string:button_cancel"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "model:ir.model.button,string:button_confirm"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "model:ir.model.button,string:button_draft"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "model:ir.model.button,string:button_post"
+msgid "Post"
+msgstr "Contabilizar"
+
+msgctxt "model:ir.ui.menu,name:menu_mileage"
+msgid "Mileage"
+msgstr "Kilometraje"
+
+msgctxt "model:ir.ui.menu,name:menu_period"
+msgid "Period"
+msgstr "Período"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Confirmed"
+msgstr "Confirmado"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:employee.mileage.period,state:"
+msgid "Posted"
+msgstr "Contabilizado"
+
+msgctxt "view:account.configuration:"
+msgid "Employee Mileage"
+msgstr "Kilometraje de los empleados"
+
+msgctxt "view:company.employee:"
+msgid "Mileage"
+msgstr "Kilometraje"
+
+msgctxt "view:employee.mileage:"
+msgid "1"
+msgstr "1"
