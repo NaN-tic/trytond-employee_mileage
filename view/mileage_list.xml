@@ -3,6 +3,6 @@
     <field name="date"/>
     <field name="resource"/>
     <field name="address"/>
-    <field name="distance" sum="Distance"/>
+    <field name="distance" sum="1"/>
     <field name="description"/>
  </tree>
