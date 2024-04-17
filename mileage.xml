@@ -49,22 +49,22 @@
         <record model="ir.model.button" id="button_draft">
             <field name="name">draft</field>
             <field name="string">Draft</field>
-            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+            <field name="model">employee.mileage.period</field>
         </record>
         <record model="ir.model.button" id="button_confirm">
             <field name="name">confirm</field>
             <field name="string">Confirm</field>
-            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+            <field name="model">employee.mileage.period</field>
         </record>
         <record model="ir.model.button" id="button_post">
             <field name="name">post</field>
             <field name="string">Post</field>
-            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+            <field name="model">employee.mileage.period</field>
         </record>
         <record model="ir.model.button" id="button_cancel">
             <field name="name">cancel</field>
             <field name="string">Cancel</field>
-            <field name="model" search="[('model', '=', 'employee.mileage.period')]"/>
+            <field name="model">employee.mileage.period</field>
         </record>
 
         <menuitem id="menu_period" parent="company.menu_company" sequence="1" icon="tryton-list" action="act_period" />
