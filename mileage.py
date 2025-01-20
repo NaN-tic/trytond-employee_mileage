@@ -1,6 +1,6 @@
 from trytond.model import ModelSQL, ModelView, fields, Workflow
 from trytond.transaction import Transaction
-from trytond.pyson import Eval
+from trytond.pyson import Eval, Bool
 from trytond.pool import Pool, PoolMeta
 from trytond.modules.currency.fields import Monetary
 from trytond.modules.company.model import CompanyValueMixin
@@ -14,11 +14,22 @@ class Mileage(ModelSQL, ModelView):
     "Employee Mileage"
     __name__ = 'employee.mileage'
     resource = fields.Reference('Resource', selection='get_resource')
-    address = fields.Many2One('party.address', 'Address', required=True)
-    distance = fields.Integer('Distance', required=True)
+    address = fields.Many2One('party.address', 'Address', states={
+        'readonly': Bool(Eval('amount')),
+        'required': ~Bool(Eval('amount')) | Bool(Eval('distance', None)),
+        })
+    distance = fields.Integer('Distance', states={
+        'readonly': Bool(Eval('amount')),
+        'required': ~Bool(Eval('amount')) | Bool(Eval('address', None)),
+        })
     date = fields.Date('Date', required=True)
     description = fields.Char('Description')
     period = fields.Many2One('employee.mileage.period', 'Period', required=True)
+    amount =  fields.Numeric('Amount', digits=(16, 2), states={
+        'readonly': Bool(Eval('distance')) | Bool(Eval('address')),
+        'required': ~(Bool(Eval('distance')) | Bool(Eval('address'))),
+        })
+
 
     @classmethod
     def __setup__(cls):
@@ -26,7 +37,7 @@ class Mileage(ModelSQL, ModelView):
         cls.__access__.add('period')
 
     def get_rec_name(self, name):
-        res = self.address.rec_name
+        res = self.address.rec_name if self.address else ''
         if self.description:
             res += ' - ' + self.description
         return res
@@ -146,8 +157,9 @@ class Period(Workflow, ModelSQL, ModelView):
             if period.employee.price_per_km is None:
                 raise UserError(gettext('employee_mileage.msg_no_price_per_km',
                         name=period.employee.party.name))
-            amount = sum([m.distance for m in period.mileage])
+            amount = sum([m.distance for m in period.mileage if m.distance])
             amount *= period.employee.price_per_km
+            amount += sum([m.amount for m in period.mileage if m.amount])
             amount = round(amount, 2)
 
             line_debit = Line()
