@@ -102,6 +102,10 @@ msgctxt "model:ir.message,text:msg_debit_none"
 msgid "Employee \"%(name)s\" does not have a debit account."
 msgstr "L'empleat \"%(name)s\" no té un compte de dèbit."
 
+msgctxt "model:ir.message,text:msg_no_distance_and_amount"
+msgid "You must enter either a distance or an amount."
+msgstr "Heu d'introduir una distància o una quantitat."
+
 msgctxt "model:ir.message,text:msg_no_price_per_km"
 msgid "Employee \"%(name)s\" has no \"Price per Km\" set."
 msgstr "L'empleat \"%(name)s\" no té definit \"Preu per km\"."
@@ -154,7 +158,6 @@ msgctxt "view:company.employee:"
 msgid "Mileage"
 msgstr "Quilometratge"
 
-#, fuzzy
 msgctxt "view:employee.mileage:"
 msgid "1"
 msgstr "1"

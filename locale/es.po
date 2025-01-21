@@ -102,6 +102,10 @@ msgctxt "model:ir.message,text:msg_debit_none"
 msgid "Employee \"%(name)s\" does not have a debit account."
 msgstr "El empleado \"%(name)s\" no tiene una cuenta de débito."
 
+msgctxt "model:ir.message,text:msg_no_distance_and_amount"
+msgid "You must enter either a distance or an amount."
+msgstr "Debes introducir una distancia o una cantidad."
+
 msgctxt "model:ir.message,text:msg_no_price_per_km"
 msgid "Employee \"%(name)s\" has no \"Price per Km\" set."
 msgstr "El empleado \"%(name)s\" no tiene configurado ningún \"Precio por km\"."

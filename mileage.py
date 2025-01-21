@@ -14,10 +14,7 @@ class Mileage(ModelSQL, ModelView):
     "Employee Mileage"
     __name__ = 'employee.mileage'
     resource = fields.Reference('Resource', selection='get_resource')
-    address = fields.Many2One('party.address', 'Address', states={
-        'readonly': Bool(Eval('amount')),
-        'required': ~Bool(Eval('amount')) | Bool(Eval('distance', None)),
-        })
+    address = fields.Many2One('party.address', 'Address', required=True)
     distance = fields.Integer('Distance', states={
         'readonly': Bool(Eval('amount')),
         'required': ~Bool(Eval('amount')) | Bool(Eval('address', None)),
@@ -25,10 +22,7 @@ class Mileage(ModelSQL, ModelView):
     date = fields.Date('Date', required=True)
     description = fields.Char('Description')
     period = fields.Many2One('employee.mileage.period', 'Period', required=True)
-    amount =  fields.Numeric('Amount', digits=(16, 2), states={
-        'readonly': Bool(Eval('distance')) | Bool(Eval('address')),
-        'required': ~(Bool(Eval('distance')) | Bool(Eval('address'))),
-        })
+    amount =  fields.Numeric('Amount', digits=(16, 2))
 
 
     @classmethod
@@ -61,6 +55,14 @@ class Mileage(ModelSQL, ModelView):
             res.append((m.model, m.name))
         return res
 
+    @classmethod
+    def validate(cls, records):
+      for record in records:
+          record.check_distance_and_amount()
+
+    def check_distance_and_amount(self):
+        if not self.distance and not self.amount:
+            raise UserError(gettext('employee_mileage.msg_no_distance_and_amount'))
 
 class Period(Workflow, ModelSQL, ModelView):
     "Employee Mileage Period"
