@@ -22,7 +22,7 @@ class Mileage(ModelSQL, ModelView):
     date = fields.Date('Date', required=True)
     description = fields.Char('Description')
     period = fields.Many2One('employee.mileage.period', 'Period', required=True)
-    amount =  fields.Numeric('Amount', digits=(16, 2))
+    amount =  fields.Numeric('Amount', digits=price_digits)
 
 
     @classmethod
@@ -62,7 +62,8 @@ class Mileage(ModelSQL, ModelView):
 
     def check_distance_and_amount(self):
         if not self.distance and not self.amount:
-            raise UserError(gettext('employee_mileage.msg_no_distance_and_amount'))
+            raise UserError(gettext('employee_mileage.msg_no_distance_and_amount',
+                                    record=self.rec_name))
 
 class Period(Workflow, ModelSQL, ModelView):
     "Employee Mileage Period"

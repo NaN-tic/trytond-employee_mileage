@@ -103,8 +103,8 @@ msgid "Employee \"%(name)s\" does not have a debit account."
 msgstr "L'empleat \"%(name)s\" no té un compte de dèbit."
 
 msgctxt "model:ir.message,text:msg_no_distance_and_amount"
-msgid "You must enter either a distance or an amount."
-msgstr "Heu d'introduir una distància o una quantitat."
+msgid "You must enter either a distance or an amount in record \"%(record)s\"."
+msgstr "Heu d'introduir una distància o una quantitat al registre \"%(record)s\"."
 
 msgctxt "model:ir.message,text:msg_no_price_per_km"
 msgid "Employee \"%(name)s\" has no \"Price per Km\" set."
