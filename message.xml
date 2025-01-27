@@ -12,6 +12,8 @@
         <record model='ir.message' id='msg_no_price_per_km'>
             <field name='text'>Employee "%(name)s" has no "Price per Km" set.</field>
         </record>
-        
+        <record model='ir.message' id='msg_no_distance_and_amount'>
+            <field name='text'>You must enter either a distance or an amount in record "%(record)s".</field>
+        </record>
     </data>
 </tryton>

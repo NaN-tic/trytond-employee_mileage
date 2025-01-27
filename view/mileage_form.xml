@@ -5,6 +5,7 @@
     <field name="address"/>
     <label name="distance"/>
     <field name="distance"/>
+    <label name="amount"/>
     <label name="date"/>
     <field name="date"/>
     <label name="description"/>

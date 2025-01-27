@@ -4,5 +4,6 @@
     <field name="resource"/>
     <field name="address"/>
     <field name="distance" sum="1"/>
+    <field name="amount" sum="1"/>
     <field name="description"/>
  </tree>
