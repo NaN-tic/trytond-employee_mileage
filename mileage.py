@@ -17,7 +17,6 @@ class Mileage(ModelSQL, ModelView):
     address = fields.Many2One('party.address', 'Address', required=True)
     distance = fields.Integer('Distance', states={
         'readonly': Bool(Eval('amount')),
-        'required': ~Bool(Eval('amount')) | Bool(Eval('address', None)),
         })
     date = fields.Date('Date', required=True)
     description = fields.Char('Description')
