@@ -48,10 +48,10 @@ class Mileage(ModelSQL, ModelView):
         pool = Pool()
         Model = pool.get('ir.model')
         models = cls._get_resource()
-        models = Model.search([('model', 'in', models)])
+        models = Model.search([('name', 'in', models)])
         res = [('', '')]
         for m in models:
-            res.append((m.model, m.name))
+            res.append((m.name, m.string))
         return res
 
     @classmethod
