@@ -141,7 +141,7 @@ class Period(Workflow, ModelSQL, ModelView):
         else:
             default = default.copy()
         default.setdefault('state', 'draft')
-        super().copy(periods, default=default)
+        return super().copy(periods, default=default)
 
     @classmethod
     @ModelView.button
