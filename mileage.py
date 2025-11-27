@@ -5,6 +5,7 @@ from trytond.pool import Pool, PoolMeta
 from trytond.modules.currency.fields import Monetary
 from trytond.modules.company.model import CompanyValueMixin
 from trytond.exceptions import UserError
+from trytond.model.exceptions import ValidationError
 from trytond.i18n import gettext
 from trytond.modules.product import price_digits
 import datetime
@@ -61,7 +62,7 @@ class Mileage(ModelSQL, ModelView):
 
     def check_distance_and_amount(self):
         if not self.distance and not self.amount:
-            raise UserError(gettext('employee_mileage.msg_no_distance_and_amount',
+            raise ValidationError(gettext('employee_mileage.msg_no_distance_and_amount',
                                     record=self.rec_name))
 
 class Period(Workflow, ModelSQL, ModelView):
