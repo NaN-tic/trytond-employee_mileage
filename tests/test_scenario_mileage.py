@@ -45,6 +45,7 @@ class Test(unittest.TestCase):
         Party = Model.get('party.party')
         customer = Party(name='Customer')
         customer.save()
+        address, = customer.addresses
 
         # Configure journal
         journal, = Journal.find([], limit=1)
@@ -72,7 +73,7 @@ class Test(unittest.TestCase):
         period.employee = employee
         mileage = period.mileage.new()
         mileage.distance = 4
-        mileage.address = customer
+        mileage.address = address
         mileage.date = datetime.date.today()
         mileage.period = period
         period.save()
