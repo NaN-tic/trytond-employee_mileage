@@ -217,10 +217,11 @@ class Period(Workflow, ModelSQL, ModelView):
 
 class Employee(metaclass = PoolMeta):
     __name__ = 'company.employee'
-    price_per_km = Monetary("Price per KM", required=True,
+    price_per_km = Monetary("Price per KM",
         digits=price_digits, currency='currency')
-    debit_account = fields.Many2One('account.account', 'Debit account', required=True)
-    currency = fields.Function(fields.Many2One('currency.currency', 'Currency'), 'get_currency')
+    debit_account = fields.Many2One('account.account', 'Debit account')
+    currency = fields.Function(
+        fields.Many2One('currency.currency', 'Currency'), 'get_currency')
 
     @classmethod
     def get_currency(cls, journals, name):
